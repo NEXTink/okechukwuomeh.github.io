@@ -1,0 +1,59 @@
+@import "../../mixins";
+.me{
+  height: 18rem;
+  border-radius: 500rem;
+  @include Respond(phone){
+    height: 16rem;
+    border-radius: 10rem;
+  }
+}
+.hero{
+  background-color: #f5f5f5;
+  transition: all .3s;
+  height: 80vh;
+  position: relative;
+  .hero-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  &-text{
+    margin-left: 3rem;
+    //color: white;
+
+    h2{
+      font-size: 3rem;
+      background-image: linear-gradient(15deg, #ef729e, #9a54ea,#147dd4, #14d4be);
+      -webkit-background-clip: text;
+      color: transparent;
+      span{
+        color: #0b0b0b;
+        font-size: 1.15rem;
+        display: block;
+        font-weight: normal;
+      }
+    }
+    .highBtn{
+      border: none;
+      padding: 1rem 1.8rem;
+      border-radius: 250rem;
+      background-color: #61d6fa;
+      font-size: 1.35rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: #373737;
+      transition: all .35s;
+      &:hover{
+        background-color: #53b2ce;
+        color: white;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,7 +1,15 @@
 
 .darkTheme{
-  background-image:linear-gradient(15deg,#272727,#000000);
+  @import "components/dpurpose";
+  @import "components/dhero";
+  @import "./dark_navigation";
+  @import "components/dreview";
+  @import "components/Skills";
+  @import "components/homeAbout";
+  @import "components/dprojects";
+  background-color: #050505;
   color: #f2f2f2;
+  transition: all 1s;
   .Link-{
     text-decoration: none;
   }
@@ -13,11 +21,26 @@
     padding: 0.5rem 1.6rem;
     border-radius: 250rem;
     text-align: center;
-    border: 2px solid #f9f9f9;
+    border: 2px solid #fdde2e;
     background-color: #0b0b0b;
-    color: white;
-    position: absolute;top: 50%;
+    color: #fdde2e;
+    position: fixed;top: 80%;
     right: 2rem;
+    z-index: 120;
+    font-size: 1.25rem;
+    animation: button-op .8s 0.2s;
+    &:focus{
+      outline: none;
+      -moz-outline-color: transparent;
+    }
+    &-icon{
+      animation: icon-rot-d 1.2s 0.1s ease-out;
+      transform: translateX(-1rem);
+      &:active{
+        -moz-outline-color: transparent;
+        outline: none;
+      }
+    }
   }
 
 }

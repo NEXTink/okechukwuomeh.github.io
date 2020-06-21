@@ -1,5 +1,8 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "./sass/darkTheme/dark";
+@import "./sass/lightTheme/light";
+@import "sass/components/footer";
+@import "./sass/components/button";
+@import "sass/colors";
+@import "sass/components/typography";
+@import "sass/aboutMe";
+@import "strct";

@@ -1,0 +1,11 @@
+@import "../mixins";
+.par{
+  font-size: 1.15rem;
+  text-align: left;
+  @include Respond(phone){
+    text-align: center;
+  }
+}
+//.project_live-link{
+//
+//}

@@ -1,0 +1,65 @@
+@import "./src/sass/mixins";
+.contactForm{
+    width: 50%;
+    //background-color: #0d0d0d;
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  @include Respond(phone){
+    width: 100%;
+  }
+  &-H{
+    font-size: 2.5rem;
+  }
+  .input-box{
+    //width: 100%;
+    width: 30rem;
+    display: inline-block;
+    border-radius: 20rem;
+    font-size: 1.25rem;
+
+    .input{
+      width: 100%;
+      margin: 1rem auto;
+      padding: 1rem;
+      border: none;
+      border-radius: 200rem;
+      background-color: #c6c6c6;
+      //margin-bottom: 1rem;
+      &:focus{
+        outline: none;
+      }
+    }
+    .textarea{
+      width: 100%;
+      //background-color: inherit;
+      padding: 1rem;
+      min-height: 10rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: #c6c6c6;
+      resize: none;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+}
+.contact{
+  position: relative;
+  height: 100vh;
+  background-color: inherit;
+  width: 100%;
+  @include Respond(phone){
+    margin: 0;
+  }
+}

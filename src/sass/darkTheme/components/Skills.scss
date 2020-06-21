@@ -1,0 +1,69 @@
+@import "../../mixins";
+.skills{
+  margin: 4rem 10rem;
+  @include Respond(tab-port){
+    margin: 5rem;
+  }
+  @include Respond(phone){
+    margin: 1rem;
+  }
+.head-h{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin: 3rem 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include Respond(tab-port){
+      justify-content: center;
+      align-items: center;
+    }
+    hr{
+      padding: 0.5rem  1rem;
+      border-radius: 200rem;
+      display: block;
+      width: 10rem;
+      border: none;
+      margin-bottom: 0.5rem;
+      background-color: white;
+    }
+    span{
+      font-size: 1.8rem;
+      font-weight: bold;
+      //margin: 0.5rem 0;
+    }
+    p{
+      font-size: 1.2rem;
+      font-weight: lighter;
+      margin: 0.5rem 0;
+    }
+  }
+}
+  .skill-box{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .round-icon-box{
+      border-radius: 2rem;
+      padding: 2rem;
+      background-color: #0d0d0d;
+      margin:1rem;
+      display: inline-block;
+      &:nth-child(1){
+        margin:1rem 0;
+        @include Respond(tab-port){
+          margin: 1rem;
+        }
+      }
+
+      .round-icon{
+        font-size: 4.5rem;
+
+      }
+    }
+  }
+}

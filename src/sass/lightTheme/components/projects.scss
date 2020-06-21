@@ -11,18 +11,24 @@
 }
 .project-lay{
   display: flex;
-  //flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   margin: 1rem;
   text-align: center;
   font-size: 1.15rem;
+  .project_live-link{
+    text-decoration: none;
+    color: #1fd9f8;
+    font-size: 1.45rem;
+    font-weight: bold;
+    padding-top: 2rem;
+  }
   @include Respond(phone){
     flex-direction: column-reverse;
   }
   h4{
-text-align: center;
-    background-color: #050505;
+    text-align: center;
+    background-color: #c0c0c0;
     padding: 0.8rem;
     border-radius: 20rem;
     display: inline-block;
@@ -40,13 +46,15 @@ text-align: center;
     }
   }
   .text-box{
+    padding: 1rem;
     p{
-
+     margin: 1rem 0;
+      font-size: 1.15rem;
     }
   }
 }
 .project-section{
-  background-color: #0d0d0d;
+  background-color: #f5f5f5;
   margin: 5rem 0;
   padding: 5rem 8rem!important; ;
   @include Respond(tab-port){
@@ -55,10 +63,4 @@ text-align: center;
   @include Respond(phone){
     padding: 2rem !important;
   }
-}
-.project_live-link{
-  text-decoration: none;
-  color: #0980a4;
-  font-size: 1.35rem;
-  font-weight: bold;
 }

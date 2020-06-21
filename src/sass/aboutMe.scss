@@ -1,0 +1,108 @@
+@import "mixins";
+.aboutPage{
+  padding: 1rem 5rem;
+  .designH{
+    font-size: 3rem;
+    text-align: center;
+    background-image: linear-gradient(15deg, #ef729e, #9a54ea,#147dd4, #14d4be);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 10px 10px 40px rgba(255,255,255,0.2) inset,-10px -10px 40px rgba(0,0,0,0.2) inset;
+  }
+  &-dets{
+    h1{
+      font-size: 2rem;
+      font-weight: bold;
+      transition: all 1s ease-in-out;
+      text-align: center;
+      span{
+        font-weight: 400;
+        display: block;
+        font-size: 1.25rem;
+      }
+    }
+    .aboutContext{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 70%;
+      margin: 0 auto;
+      @include Respond(tab-port){
+        flex-direction: column;
+      }
+      @include Respond(phone){
+        width: 100%;
+      }
+       .aboutImg{
+         @include Respond(tab-port){
+           width: 50%;
+         }
+         @include Respond(phone){
+           width: 80%;
+         }
+         width:15rem;
+         //flex: 1;
+         padding: 2rem;
+         border-radius: 20rem;
+         box-shadow: 10px 10px 40px rgba(255,255,255,0.2), 10px 10px 40px rgba(255,255,255,0.2) inset,-10px -10px 40px rgba(0,0,0,0.2) inset,10px 10px 40px rgba(0,0,0,0.3);
+       }
+      .aboutText{
+        text-align: center;
+        @include Respond(tab-port){
+          width: 100%;
+          margin-top: 2rem;
+          text-align: center;
+        }
+        width: 60%;
+        padding: 2rem;
+        border-radius: 2rem;
+        font-family: Lato,sans-serif,"Helvetica Neue","Raleway";
+        font-weight: normal;
+        box-shadow: 10px 10px 40px rgba(255,255,255,0.2), 10px 10px 40px rgba(255,255,255,0.2) inset,-10px -10px 40px rgba(0,0,0,0.2) inset,10px 10px 40px rgba(0,0,0,0.3);
+        p{
+          font-size: 1.25rem;
+          margin: 0.5rem 0;
+        }
+        span{
+          font-size: 1.65rem;
+          font-weight: bold;
+          color: #4679fa;
+
+        }
+        .aboutSkill{
+          font-size: 1.45rem;
+          color: #2b6fa4;
+          font-weight: bold;
+          text-transform: capitalize;
+
+        }
+        .aboutList{
+          text-align: left;
+          list-style: disc;
+
+          padding: 1rem;
+          margin: 0 0 0 1rem;
+          font-family: Lato,sans-serif,"Helvetica Neue","Raleway";
+          font-weight: normal;
+          &-item{
+            font-size: 1.25rem;
+            //font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+.about{
+  transition: all .5s ease-in-out;
+}
+.aboutSkills{
+  //background-color: #f5f5f5;
+  h2{
+    margin: 3rem 0;
+    text-align: center;
+  }
+}
