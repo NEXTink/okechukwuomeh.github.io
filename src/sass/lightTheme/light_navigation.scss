@@ -1,0 +1,159 @@
+@import "../mixins";
+
+.logo{
+  font-size: 1.15rem;
+  background-color: #5a5a5a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 250rem;
+}
+
+.navigation-box{
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include Respond(tab-port){
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .menu{
+    display: none;
+  }
+  .menu ~ .navigation-list{
+    @include Respond(tab-port){
+      display: none;
+    }
+  }
+  .menu:checked ~ .navigation-list{
+    display: flex;
+  }
+  .menu ~ .bar > .menu-bars::before{
+
+    transform: rotate(0deg);
+  }
+  .menu ~ .bar > .menu-bars::after{
+    transform: rotate(0deg);
+  }
+  .menu:checked ~ .bar > .menu-bars::before{
+    transform: rotate(-50deg);
+  }
+  .menu:checked ~ .bar > .menu-bars::after{
+
+    transform: rotate(50deg);
+  }
+  .bar{
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    z-index: 250;
+  }
+  .menu-bars{
+    &::before,&::after{
+      width: 3rem;
+      height: 5px;
+      background-color: #ffd700;
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+      transition: all .3s;
+      display: none;
+
+      @include Respond(tab-port){
+        display: block;
+      }
+    }
+    &{
+      left: .5rem;
+      top: 0;
+    }
+    &::before,&::after{
+      content: '';
+    }
+    &::before{
+      top: -0.5rem
+    }
+    &::after{
+      top: 0.5rem;
+    }
+  }
+
+
+  .navigation-list{
+    list-style: none;
+    display: flex;
+    flex: 0.8;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+    @include Respond(tab-port){
+      flex-direction: column;
+      justify-content: normal;
+      flex: 0.45;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-image: linear-gradient(15deg,#000000,#0b0b0b);
+      z-index: 200;
+      padding: 1rem;
+      border-radius: 8px;
+      height: 100%;
+
+    }
+    .navigation-item{
+      //color: #ffffff;
+      padding: 0.6rem 1.5rem;
+      font-size: 1.15rem;
+      margin: 1.2rem 0;
+      transition: all .35s;
+      background-color: #5a5a5a;
+      border-radius: 250rem;
+      @include Respond(tab-port){
+        font-size: 1.8rem;
+      }
+      &:hover{
+        color:#ffd700;
+
+      }
+    }
+  }
+  .auth-btn-box{
+    padding: 2rem 0;
+    @include Respond(tab-port){
+      text-align: center;
+
+    }
+    .auth-btn{
+      &,&:link,&.Link-{
+        padding: 0.5rem 1.5rem;
+        border-radius: 250rem;
+        border: 1px solid #2b6fa4;
+        color: #0980a4;
+        transition: all .3s;
+        margin: 0 1.2rem;
+        text-transform: capitalize;
+        display: inline-block;
+        text-align: center;
+        @include Respond(tab-port){
+          margin: 1.2rem;
+          //padding: 1rem 2rem;
+          font-size: 1.65rem;
+        }
+      }
+      & .Link-{
+        color: #0980a4;
+      }
+      &:hover .Link-{
+        color: #f7f7f7;
+        text-decoration: none;
+      }
+      &:hover,&:active{
+        background-color:#0980a4;;
+        //color: #0b0b0b;
+        //border: 1px solid #0b0b0b;
+      }
+    }
+  }
+}

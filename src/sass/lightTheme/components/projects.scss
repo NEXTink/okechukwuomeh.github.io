@@ -1,0 +1,64 @@
+@import "../../mixins";
+.project-box{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  @include Respond(phone){
+    width: 100%;
+  }
+}
+.project-lay{
+  display: flex;
+  //flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.15rem;
+  @include Respond(phone){
+    flex-direction: column-reverse;
+  }
+  h4{
+text-align: center;
+    background-color: #050505;
+    padding: 0.8rem;
+    border-radius: 20rem;
+    display: inline-block;
+    margin: 0.8rem 0;
+  }
+  .img-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      width: 80%;
+      margin: 1rem auto;
+      position: relative;
+      border-radius: 1rem;
+    }
+  }
+  .text-box{
+    p{
+
+    }
+  }
+}
+.project-section{
+  background-color: #0d0d0d;
+  margin: 5rem 0;
+  padding: 5rem 8rem!important; ;
+  @include Respond(tab-port){
+    padding: 3rem !important;
+  }
+  @include Respond(phone){
+    padding: 2rem !important;
+  }
+}
+.project_live-link{
+  text-decoration: none;
+  color: #0980a4;
+  font-size: 1.35rem;
+  font-weight: bold;
+}
